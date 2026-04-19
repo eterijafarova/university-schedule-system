@@ -109,3 +109,13 @@ td {
 .logout-btn:hover {
     background: #991b1b;
 }
+
+
+/* DELETE */
+button.delete {
+    background: #dc2626;
+}
+
+button.delete:hover {
+    background: #b91c1c;
+}

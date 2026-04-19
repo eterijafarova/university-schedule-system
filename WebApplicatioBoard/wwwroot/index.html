@@ -12,14 +12,13 @@
 
     <a href="/index.html" class="active">Users</a>
     <a href="/schedule.html">Schedule</a>
-    <a href="/page3.html">Page 3</a>
 </div>
 
 <div class="main">
 
-    <div class="topbar">
-        <input placeholder="Search..." style="width: 300px;">
-    </div>
+<!--    <div class="topbar">-->
+<!--        <input placeholder="Search..." style="width: 300px;">-->
+<!--    </div>-->
 
     <div class="card">
         <h3>Users</h3>
@@ -33,17 +32,25 @@
         <input id="surname" placeholder="Surname">
         <input id="patronymic" placeholder="Patronymic">
 
-        <select id="role">
+        <select id="role" onchange="toggleRoleFields()">
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
         </select>
 
-        <input id="group" placeholder="Group">
-        <input id="fin" placeholder="FIN">
+        <!-- STUDENT FIELDS -->
+        <div id="studentFields">
+            <input id="group" placeholder="Group">
+            <input id="fin" placeholder="FIN">
+        </div>
+
+        <!-- TEACHER FIELDS -->
+        <div id="teacherFields" style="display:none;">
+            <input id="subjects" placeholder="Subjects (comma separated)">
+            <input id="password" placeholder="Password">
+        </div>
 
         <button onclick="addUser()">Add</button>
     </div>
-
     <div class="card">
         <h3>Search Student</h3>
         <input id="search">

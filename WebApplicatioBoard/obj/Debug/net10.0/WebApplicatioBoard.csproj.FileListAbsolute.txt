@@ -35,12 +35,12 @@ C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net1
 C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\WebApplicatioBoard.pdb
 C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\WebApplicatioBoard.genruntimeconfig.cache
 C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\ref\WebApplicatioBoard.dll
-C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\btbsazwkhs-{0}-01a3tbii4q-01a3tbii4q.gz
 C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\8ybkxioikl-{0}-is91b41u0l-is91b41u0l.gz
-C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\bej5luakrf-{0}-5kzo59jyy2-5kzo59jyy2.gz
 C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\bin\Debug\net10.0\wwwroot\schedule.html
 C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\bin\Debug\net10.0\wwwroot\schedule.html.gz
-C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\flf4wq8pa8-{0}-p9w7arolfg-p9w7arolfg.gz
-C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\qm1sm2xrzq-{0}-0ia78f4hlq-0ia78f4hlq.gz
 C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\7q8ivsrp6b-{0}-dzmbspez2q-dzmbspez2q.gz
-C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\k4alqpqmrd-{0}-sx3sbhut65-sx3sbhut65.gz
+C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\WebApplicatioBoard.sourcelink.json
+C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\flf4wq8pa8-{0}-r6vw3ulwkt-r6vw3ulwkt.gz
+C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\qm1sm2xrzq-{0}-r91cituuad-r91cituuad.gz
+C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\k4alqpqmrd-{0}-6f0a1kw43x-6f0a1kw43x.gz
+C:\Users\ASUS\RiderProjects\WebApplicatioBoard\WebApplicatioBoard\obj\Debug\net10.0\compressed\bej5luakrf-{0}-4m6m2juczc-4m6m2juczc.gz

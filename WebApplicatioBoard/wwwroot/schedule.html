@@ -11,32 +11,64 @@
     <h2>Dashboard</h2>
     <a href="/index.html">Users</a>
     <a href="/schedule.html" class="active">Schedule</a>
-    <a href="/page3.html">Page 3</a>
 </div>
 
 <div class="main">
 
+    <!-- ADD LESSON -->
     <div class="card">
         <h3>Add Lesson</h3>
 
-        <input id="day" placeholder="Day">
-        <input id="time" placeholder="Time (HH:mm)">
-        <input id="subject" placeholder="Subject">
-        <input id="room" placeholder="Room">
-        <input id="groupId" placeholder="Group">
+        <!-- DAY -->
+        <select id="day">
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+        </select>
 
-        <select id="teacherSelect"></select>
+        <input id="time" placeholder="Time (HH:mm)">
+        <select id="subject"></select>
+        <input id="room" placeholder="Room">
+
+        <!--  GROUP SELECT -->
+        <select id="groupId"></select>
+
+        <select id="teacherSelect" onchange="loadSubjectsByTeacher()"></select>
 
         <button onclick="addLesson()">Add</button>
     </div>
 
+    <!-- FILTERS -->
+    <div class="card">
+        <h3>Filters</h3>
+
+        <!-- FILTER BY DAY -->
+        <select id="filterDay" onchange="filterSchedule()">
+            <option value="">All Days</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+        </select>
+
+        <!-- FILTER BY GROUP -->
+        <select id="groupSelect" onchange="filterSchedule()"></select>
+    </div>
+
+    <!-- SCHEDULE TABLE -->
     <div class="card">
         <h3>Schedule</h3>
         <div id="scheduleTable"></div>
     </div>
 
 </div>
-
 
 <script src="/data.js"></script>
 <script src="/script.js"></script>
