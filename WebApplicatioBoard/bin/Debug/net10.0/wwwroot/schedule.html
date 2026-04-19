@@ -11,7 +11,6 @@
     <h2>Dashboard</h2>
     <a href="/index.html">Users</a>
     <a href="/schedule.html" class="active">Schedule</a>
-    <a href="/page3.html">Page 3</a>
 </div>
 
 <div class="main">
@@ -32,13 +31,13 @@
         </select>
 
         <input id="time" placeholder="Time (HH:mm)">
-        <input id="subject" placeholder="Subject">
+        <select id="subject"></select>
         <input id="room" placeholder="Room">
 
-        <!-- 🔥 GROUP SELECT -->
+        <!--  GROUP SELECT -->
         <select id="groupId"></select>
 
-        <select id="teacherSelect"></select>
+        <select id="teacherSelect" onchange="loadSubjectsByTeacher()"></select>
 
         <button onclick="addLesson()">Add</button>
     </div>

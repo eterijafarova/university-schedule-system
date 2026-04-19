@@ -148,6 +148,7 @@ function addUser() {
         loadLoginTeachers();
         loadSubjects();
 
+        alert("User added");
         return;
     }
 
@@ -470,11 +471,13 @@ function loadSubjects() {
 
 
 function loadSubjectsByTeacher() {
-    const teacherId = Number(document.getElementById("teacherSelect").value);
-    const teachers = getData("teachers");
+    const teacherSelect = document.getElementById("teacherSelect");
     const select = document.getElementById("subject");
+    
+    if (!teacherSelect || !select) return;
 
-    if (!select) return;
+    const teacherId = Number(teacherSelect.value);
+    const teachers = getData("teachers");
 
     const teacher = teachers.find(t => t.id === teacherId);
     
@@ -491,6 +494,13 @@ function loadSubjectsByTeacher() {
 
 /* DELETE */
 function deleteStudent(id) {
+    const teacherId = localStorage.getItem("currentTeacherId");
+
+    if (!teacherId) {
+        alert("Only teachers can delete students");
+        return;
+    }
+
     let students = getData("students");
 
     students = students.filter(s => s.id !== id);
@@ -501,10 +511,16 @@ function deleteStudent(id) {
     loadGroupsToLesson();
 }
 
-
 function deleteTeacher(id) {
+    const teacherId = localStorage.getItem("currentTeacherId");
+
+    if (!teacherId) {
+        alert("Only teachers can delete teachers");
+        return;
+    }
+
     const schedule = getData("schedule");
-    
+
     const hasLessons = schedule.some(s => s.teacherId === id);
 
     if (hasLessons) {
@@ -525,6 +541,13 @@ function deleteTeacher(id) {
 
 /* EDIT */
 function editStudent(id) {
+    const teacherId = localStorage.getItem("currentTeacherId");
+
+    if (!teacherId) {
+        alert("Only teachers can edit students");
+        return;
+    }
+
     const students = getData("students");
     const s = students.find(x => x.id === id);
 
@@ -540,10 +563,12 @@ function editStudent(id) {
 
     document.getElementById("role").value = "student";
     toggleRoleFields();
-}
 
+    if (!teacherId) {
+        alert("Only teachers can edit teachers");
+        return;
+    }
 
-function editTeacher(id) {
     const teachers = getData("teachers");
     const t = teachers.find(x => x.id === id);
 
@@ -559,10 +584,11 @@ function editTeacher(id) {
 
     document.getElementById("role").value = "teacher";
     toggleRoleFields();
+
+    alert("User added");
 }
 
 // ===== INIT =====
-
 document.addEventListener("DOMContentLoaded", () => {
     init();
 
@@ -573,9 +599,11 @@ document.addEventListener("DOMContentLoaded", () => {
     loadTeachers();
     loadGroups();
     loadGroupsToLesson();
-    loadSubjectsByTeacher();
+    
+    if (document.getElementById("teacherSelect")) {
+        loadSubjectsByTeacher();
+    }
 
-  
     if (document.getElementById("role")) {
         toggleRoleFields();
     }
