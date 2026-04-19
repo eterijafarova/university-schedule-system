@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApplicatioBoard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04d67d5f3733fd26782c73e692dd3ae47962f3e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e4d5dcf0f826b6788404b070a85efb99c124a6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApplicatioBoard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApplicatioBoard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

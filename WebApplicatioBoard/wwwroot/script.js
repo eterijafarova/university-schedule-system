@@ -251,8 +251,9 @@ function searchStudent() {
 }
 
 // ===== SCHEDULE =====
-function renderSchedule() {
-    const schedule = getData("schedule");
+
+function renderSchedule(data = null) {
+    const schedule = data || getData("schedule");
     renderFilteredSchedule(schedule);
 }
 
@@ -319,13 +320,23 @@ function addLesson() {
 function filterSchedule() {
     const day = document.getElementById("filterDay")?.value;
     const group = document.getElementById("groupSelect")?.value;
+    const teacherId = document.getElementById("filterTeacher")?.value;
 
     let schedule = getData("schedule");
 
-    if (day) schedule = schedule.filter(s => s.day === day);
-    if (group) schedule = schedule.filter(s => s.groupId === group);
+    if (day) {
+        schedule = schedule.filter(s => s.day === day);
+    }
 
-    renderFilteredSchedule(schedule);
+    if (group) {
+        schedule = schedule.filter(s => s.groupId === group);
+    }
+
+    if (teacherId) {
+        schedule = schedule.filter(s => String(s.teacherId) === teacherId);
+    }
+
+    renderSchedule(schedule); 
 }
 
 // ===== RENDER FILTERED =====
@@ -492,6 +503,19 @@ function loadSubjectsByTeacher() {
         .join("");
 }
 
+
+function loadTeachersToFilter() {
+    const teachers = getData("teachers");
+    const select = document.getElementById("filterTeacher");
+
+    if (!select) return;
+
+    select.innerHTML =
+        `<option value="">All Teachers</option>` +
+        teachers.map(t => `<option value="${t.id}">${t.fullName}</option>`).join("");
+}
+
+
 /* DELETE */
 function deleteStudent(id) {
     const teacherId = localStorage.getItem("currentTeacherId");
@@ -588,6 +612,7 @@ function editStudent(id) {
     alert("User added");
 }
 
+
 // ===== INIT =====
 document.addEventListener("DOMContentLoaded", () => {
     init();
@@ -607,4 +632,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("role")) {
         toggleRoleFields();
     }
+    
+    if (document.getElementById("filterTeacher")) {
+        loadTeachersToFilter();
+    }
+    
 });

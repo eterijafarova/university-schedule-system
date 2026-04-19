@@ -46,7 +46,6 @@
     <div class="card">
         <h3>Filters</h3>
 
-        <!-- FILTER BY DAY -->
         <select id="filterDay" onchange="filterSchedule()">
             <option value="">All Days</option>
             <option>Monday</option>
@@ -58,10 +57,12 @@
             <option>Sunday</option>
         </select>
 
-        <!-- FILTER BY GROUP -->
         <select id="groupSelect" onchange="filterSchedule()"></select>
-    </div>
 
+        <select id="filterTeacher" onchange="filterSchedule()"></select>
+    </div>
+    
+    
     <!-- SCHEDULE TABLE -->
     <div class="card">
         <h3>Schedule</h3>
