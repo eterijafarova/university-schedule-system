@@ -1,0 +1,30 @@
+﻿<link rel="stylesheet" href="/style.css">
+<div class="sidebar">
+    <h2>Dashboard</h2>
+    <a href="/index.html">Users</a>
+    <a href="/schedule.html" class="active">Schedule</a>
+    <a href="/page3.html">Page 3</a>
+</div>
+
+<div class="main">
+
+    <div class="card">
+        <h3>Add Lesson</h3>
+
+        <input id="day" placeholder="Day">
+        <input id="time" placeholder="Time (HH:mm)">
+        <input id="subject" placeholder="Subject">
+        <input id="room" placeholder="Room">
+        <input id="groupId" placeholder="Group">
+
+        <select id="teacherSelect"></select>
+
+        <button onclick="addLesson()">Add</button>
+    </div>
+
+    <div class="card">
+        <h3>Schedule</h3>
+        <div id="scheduleTable"></div>
+    </div>
+
+</div>

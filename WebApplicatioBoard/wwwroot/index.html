@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>Dashboard</h2>
+
+    <a href="/index.html" class="active">Users</a>
+    <a href="/schedule.html">Schedule</a>
+    <a href="/page3.html">Page 3</a>
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+        <input placeholder="Search..." style="width: 300px;">
+    </div>
+
+    <div class="card">
+        <h3>Users</h3>
+        <div id="usersTable"></div>
+    </div>
+
+    <div class="card">
+        <h3>Add User</h3>
+
+        <input id="name" placeholder="Name">
+        <input id="surname" placeholder="Surname">
+        <input id="patronymic" placeholder="Patronymic">
+
+        <select id="role">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+        </select>
+
+        <input id="group" placeholder="Group">
+        <input id="fin" placeholder="FIN">
+
+        <button onclick="addUser()">Add</button>
+    </div>
+
+    <div class="card">
+        <h3>Search Student</h3>
+        <input id="search">
+        <button onclick="searchStudent()">Search</button>
+        <div id="searchResult"></div>
+    </div>
+
+    <div class="card">
+        <h3>Teacher Login</h3>
+        <select id="loginTeacher"></select>
+        <input id="loginPassword" placeholder="Password">
+        <button onclick="loginTeacher()">Login</button>
+        <button id="logoutBtn" onclick="logout()">Logout</button>
+    </div>
+
+</div>
+
+
+<script src="/data.js"></script>
+<script src="/script.js"></script>
+
+</body>
+</html>
